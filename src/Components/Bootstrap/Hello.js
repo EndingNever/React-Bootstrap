@@ -10,12 +10,14 @@ import './Hello.css'
 export default function Hello() {
   return (
     <Container fluid className="bg-success vh-100">
-      <Row className='h-25 mb-5'>
-        <Col xs={12} md={6} className='bg-danger h-50 border-col'>
-          <p>Column 1 Takes whole grid below md screen</p>
+      <Row className=' mb-5 h-25'>
+        <Col xs={12} md={6} lg={12} className='bg-danger border-col'>
+          <p>Shares grid at medium, takes up at xs and lg</p>
+          <p>Takes whole height</p>
         </Col>
-        <Col xs={12} md={6} className="bg-warning h-50 border-col">
+        <Col xs={12} md={6} lg={8} className="bg-warning h-50 border-col">
           <p>Column 2 Takes whole grid below md screen</p>
+          <p>Takes 50% height</p>
         </Col>
       </Row>
       <Row className='h-25 '>
@@ -32,12 +34,12 @@ export default function Hello() {
               <p>Nested Column 3</p>
             </Col>
             <Col xs={8} className="nested-column h-100 h-50 border-col d-md-none">
-              Hidden Column
+              Hidden at and above medium
             </Col>
           </Row>
         </Col>
       </Row>
-      <Row className='mt-5 bg-black text-decoration-line-through text-end text-uppercase text-danger text-white'>
+      <Row className=' mt-5 bg-black text-decoration-line-through text-end text-uppercase text-danger text-white'>
         <Col className='border-col order-1'>
           <p>First In Code</p>
         </Col>
@@ -46,7 +48,7 @@ export default function Hello() {
           <p className="text-decoration-none text-lowercase">Text-decoration applied in-line, but decoration in parent takes priority </p>
         </Col>
       </Row>
-      <Row className="mt-2">
+      <Row className="mt-2 ">
         <ButtonGroup>
           <Col xs={12} className="d-flex justify-content-center align-items-center">
             <Button className='btn-danger '>
